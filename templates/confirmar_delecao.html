@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deletar Pessoa</title>
+</head>
+
+<body>
+    <h1>Confirma que deseja deletar {{pessoa.nome}} ?</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button type="submit">Confirmar</button>
+
+    </form>
+
+</body>
+
+</html>

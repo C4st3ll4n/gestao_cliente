@@ -1,0 +1,18 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rerou</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+<body>
+ <h1 class="home">{{pessoa}}</h1>
+    {%if pessoa != null%}
+    <h1>Oi</h1>
+{%else%}
+<h1>nOi</h1>
+{%endif%}
+
+</body>
+</html>
