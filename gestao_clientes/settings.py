@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'gestao_clientes.wsgi.application'
 
 
 DATABASES = {
-    'default': config('DATABASE_URL', default= default_dburl, cast=dburlpi)
+    'default': config('DATABASE_URL', default= default_dburl, cast=dburl)
 }
 
 
