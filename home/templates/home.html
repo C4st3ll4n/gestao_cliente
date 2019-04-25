@@ -1,17 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Página Inicial</title>
-</head>
-<body>
-<h1>Seja bem-vindo</h1>
+{% extends 'base.html'%}
 
-    {% if user.is_authenticated%}
+{% block title %} Seja bem vindo {% endblock %}
+
+{% block main %}
+
+
+<div class="row">
+    <div class="col-sm">
+        One of three columns
+    </div>
+    <div class="col-sm">
+        <h1>Seja bem-vindo</h1>
+    </div>
+    <div class="col-sm">
+        {% if user.is_authenticated%}
         <p>Olá {{user.username}}</p>
-        <p><a href="{% url 'logout' %}">Sair</a> </p>
-    {%else%}
-        <p><a href="{% url 'login' %}">Login</a> </p>
-    {%endif%}
-</body>
-</html>
+        <p><a class="btn btn-danger" href="{% url 'logout' %}">Sair</a></p>
+        {%else%}
+        <p><a class="btn btn-info" href="{% url 'login' %}">Login</a></p>
+        {%endif%}
+    </div>
+</div>
+
+
+{% endblock%}
+
+ {%block footer%}
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Aprendendo Djanguineo</span>
+        </div>
+    </footer>
+
+    {%endblock%}

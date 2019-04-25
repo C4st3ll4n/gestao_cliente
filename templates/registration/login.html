@@ -1,15 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html'%}
+{% load bootstrap %}
+{% block title %} Login {% endblock %}
+
+{% block main %}
     <h2>Login</h2>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Entrar</button>
+        {{ form| bootstrap }}
+        <button class="btn btn-info" type="submit">Entrar</button>
     </form>
-</body>
-</html>
+{% endblock%}
+
+ {%block footer%}
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Aprendendo Djanguineo</span>
+        </div>
+    </footer>
+
+    {%endblock%}

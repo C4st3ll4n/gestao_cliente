@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Nova Pessoa</title>
-</head>
+{% extends 'base.html'%}
 
-<body>
+{% load bootstrap %}
+
+{% block title %} Novo cadastro {% endblock %}
+
+{% block main %}
+    <h3>Novo cliente</h3>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form }}
-        <button type="submit">Salve</button>
+        {{ form|bootstrap }}
+        <button class="btn btn-primary" type="submit">Salve</button>
 
     </form>
-
-</body>
-
-</html>
+{% endblock %}

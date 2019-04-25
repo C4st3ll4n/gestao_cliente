@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Deletar Pessoa</title>
-</head>
+{% extends 'base.html'%}
 
-<body>
+{% block title %} Deletar pessoa {% endblock %}
+
+{% block main %}
     <h1>Confirma que deseja deletar {{pessoa.nome}} ?</h1>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
@@ -13,6 +10,4 @@
 
     </form>
 
-</body>
-
-</html>
+{% endblock%}
